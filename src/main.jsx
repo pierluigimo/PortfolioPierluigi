@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
 import { 
   Github, 
   Linkedin, 
@@ -23,9 +24,6 @@ import {
 
 /**
  * Componente principale App.
- * RISOLUZIONE ERRORE: Ho rimosso ReactDOM.createRoot() perché in questo ambiente
- * l'anteprima gestisce il rendering automaticamente tramite l'export default.
- * Questo risolve il TypeError 'reading S'.
  */
 const App = () => {
   const [copied, setCopied] = useState(false);
@@ -243,7 +241,6 @@ const App = () => {
             </div>
           </div>
 
-          {/* Links Menu in minuscolo */}
           <div className="hidden xl:flex gap-6 font-mono text-[11px] tracking-[0.1em] items-center">
             {navItems.map((item, idx) => (
               <a key={item.id} href={`#${item.id}`} className="text-[#ccd6f6] hover:text-[#64ffda] transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(100,255,218,0.5)] lowercase">
@@ -528,5 +525,18 @@ const App = () => {
     </div>
   );
 };
+
+// -- BLOCCO DI MONTAGGIO: NECESSARIO PER PRODUZIONE --
+// Questo blocco è essenziale per il deploy su Vercel. 
+// L'elemento "root" è presente nel file index.html.
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
 
 export default App;
