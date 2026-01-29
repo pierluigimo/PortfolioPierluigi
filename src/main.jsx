@@ -22,9 +22,10 @@ import {
 } from 'lucide-react';
 
 /**
- * Componente principale App consolidato.
- * RISOLUZIONE ERRORE: Ho rimosso ReactDOM.createRoot() perché l'ambiente di anteprima
- * gestisce il rendering automaticamente. Questo risolve il TypeError 'reading S'.
+ * Componente principale App.
+ * RISOLUZIONE ERRORE: Ho rimosso ReactDOM.createRoot() perché in questo ambiente
+ * l'anteprima gestisce il rendering automaticamente tramite l'export default.
+ * Questo risolve il TypeError 'reading S'.
  */
 const App = () => {
   const [copied, setCopied] = useState(false);
@@ -242,6 +243,7 @@ const App = () => {
             </div>
           </div>
 
+          {/* Links Menu in minuscolo */}
           <div className="hidden xl:flex gap-6 font-mono text-[11px] tracking-[0.1em] items-center">
             {navItems.map((item, idx) => (
               <a key={item.id} href={`#${item.id}`} className="text-[#ccd6f6] hover:text-[#64ffda] transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(100,255,218,0.5)] lowercase">
