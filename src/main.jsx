@@ -23,7 +23,8 @@ import {
 
 /**
  * Componente principale App consolidato.
- * Include logica AI reale, titoli neon pulsanti e link di navigazione in minuscolo.
+ * RISOLUZIONE ERRORE: In questo ambiente di anteprima, non è necessario chiamare ReactDOM.createRoot.
+ * Il sistema gestisce automaticamente il rendering del componente 'App' esportato come default.
  */
 const App = () => {
   const [copied, setCopied] = useState(false);
