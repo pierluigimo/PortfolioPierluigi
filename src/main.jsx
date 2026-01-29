@@ -6,25 +6,25 @@ import {
   Check, 
   ArrowRight, 
   Download,
-  Zap,
-  Loader2,
-  MessageSquare,
-  Send,
-  BarChart3,
-  ShieldCheck,
-  Layout,
-  Target,
-  Globe,
-  Code2,
-  ExternalLink,
-  Menu,
-  X
+  Zap, 
+  Loader2, 
+  MessageSquare, 
+  Send, 
+  BarChart3, 
+  ShieldCheck, 
+  Layout, 
+  Target, 
+  Globe, 
+  Code2, 
+  ExternalLink, 
+  Menu, 
+  X 
 } from 'lucide-react';
 
 /**
  * Componente principale App consolidato.
- * RISOLUZIONE ERRORE: In questo ambiente di anteprima, non è necessario chiamare ReactDOM.createRoot.
- * Il sistema gestisce automaticamente il rendering del componente 'App' esportato come default.
+ * RISOLUZIONE ERRORE: Ho rimosso ReactDOM.createRoot() perché l'ambiente di anteprima
+ * gestisce il rendering automaticamente. Questo risolve il TypeError 'reading S'.
  */
 const App = () => {
   const [copied, setCopied] = useState(false);
@@ -34,7 +34,7 @@ const App = () => {
   const [error, setError] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const base = ""; 
+  const base = "/"; 
 
   useEffect(() => {
     document.title = "Pierluigi Monaco | CFO & Strategic Finance Executive";
