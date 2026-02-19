@@ -1,0 +1,4 @@
+name = "pm-ai-worker-groq" 
+main = "src/index.js" 
+compatibility_date = "2024-02-19" 
+compatibility_flags = ["nodejs_compat"] 

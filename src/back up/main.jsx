@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
 import { 
   Github, 
   Linkedin, 
@@ -22,8 +23,7 @@ import {
 } from 'lucide-react';
 
 /**
- * Componente App.
- * Include tutta la logica, contenuti in Italiano e navigazione ottimizzata.
+ * Componente principale App.
  */
 const App = () => {
   const [copied, setCopied] = useState(false);
@@ -176,45 +176,22 @@ const App = () => {
     setAiResponse("");
     setError(null);
 
-    // URL del Worker Groq
-    const endpoint = "https://pm-ai-worker-groq.pierluigimonaco2.workers.dev/";
-
     try {
-      // Effettuiamo la chiamata con configurazioni di sicurezza esplicite
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: { 
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        // 'cors' garantisce che il browser gestisca correttamente la richiesta cross-domain
-        mode: 'cors',
-        // 'omit' assicura che non vengano inviati cookie non necessari che potrebbero causare blocchi
-        credentials: 'omit',
-        body: JSON.stringify({ question: aiQuery })
-      });
+      const response = await fetch(
+        "https://pm-ai-worker.pierluigimonaco2.workers.dev/",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question: aiQuery })
+        }
+      );
 
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Errore Server ${response.status}: ${errorText || 'Nessuna risposta dal server'}`);
-      }
+      if (!response.ok) throw new Error("Servizio AI non disponibile");
 
       const data = await response.json();
-      
-      if (data.error) {
-         throw new Error(data.error);
-      }
-      
-      setAiResponse(data.answer || "L'assistente non ha restituito una risposta valida.");
+      setAiResponse(data.answer || "Nessuna risposta ricevuta.");
     } catch (err) {
-      console.error("Dettagli errore Assistente AI:", err);
-      
-      let friendlyMessage = err.message;
-      if (err.name === 'TypeError' && err.message.includes('fetch')) {
-        friendlyMessage = "Errore di rete o blocco CORS. Verifica che il Worker sia online e che accetti richieste dall'indirizzo attuale.";
-      }
-      
-      setError(`Si è verificato un problema tecnico: ${friendlyMessage}`);
+      setError("Assistente AI momentaneamente non disponibile. Contattami su LinkedIn.");
     } finally {
       setIsAiLoading(false);
     }
@@ -299,15 +276,6 @@ const App = () => {
         {isMobileMenuOpen && (
           <div className="xl:hidden absolute top-20 left-0 w-full bg-[#112240] border-b border-[#233554] shadow-xl animate-in slide-in-from-top-2">
              <div className="flex flex-col p-6 gap-4 font-mono text-sm">
-                {/* Tasto Download CV aggiunto per i dispositivi mobili */}
-                <a 
-                  href={`${base}CV_Pierluigi_Monaco.pdf`} 
-                  download="CV_Pierluigi_Monaco.pdf"
-                  className="flex items-center gap-2 text-[#64ffda] py-2 border-b border-[#233554]/30 lowercase"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Download size={14} /> scarica cv
-                </a>
                 {navItems.map((item, idx) => (
                   <a 
                     key={item.id} 
@@ -364,7 +332,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 02. Esperienza Professionale */}
+      {/* 02. Esperienza Professionale - Titolo Lampeggiante */}
       <section id="esperienza" className="py-16 px-6 max-w-4xl mx-auto scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
@@ -391,7 +359,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 03. Formazione */}
+      {/* 03. Formazione - Titolo Lampeggiante */}
       <section id="formazione" className="py-16 px-6 max-w-4xl mx-auto scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
@@ -412,7 +380,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 04. Progetti & Codice */}
+      {/* 04. Progetti & Codice - Titolo Lampeggiante */}
       <section id="progetti" className="py-16 px-6 max-w-4xl mx-auto scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
@@ -441,7 +409,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 05. Competenze Chiave */}
+      {/* 05. Competenze Chiave - Titolo Lampeggiante */}
       <section id="competenze" className="py-16 px-6 max-w-6xl mx-auto scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
@@ -466,7 +434,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 06. Strumenti Digitali */}
+      {/* 06. Strumenti Digitali - Titolo Lampeggiante */}
       <section id="strumenti" className="py-16 px-6 max-w-4xl mx-auto text-center scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <div className="h-[1px] bg-[#233554] w-full opacity-50 shadow-[0_0_10px_rgba(100,255,218,0.2)]"></div>
@@ -485,7 +453,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 07. Assistente Digitale */}
+      {/* 07. Assistente Digitale - Titolo Lampeggiante */}
       <section id="assistenteai" className="py-16 px-6 max-w-4xl mx-auto scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
@@ -497,7 +465,7 @@ const App = () => {
           <div className="absolute top-0 right-0 p-4 opacity-5 text-[#64ffda]"><Zap size={120} /></div>
           <div className="relative z-10">
             <p className="text-[#495670] text-[11px] font-mono mb-6 uppercase tracking-widest">
-              Powered by Groq & Cloudflare Workers
+              Powered by Cloudflare Workers
             </p>
             <p className="text-[#8892b0] text-sm mb-6 flex items-center gap-2 italic">
               <MessageSquare size={16} className="text-[#64ffda]" />
@@ -523,13 +491,7 @@ const App = () => {
                 <p className="text-[#ccd6f6] text-sm leading-relaxed whitespace-pre-wrap">{aiResponse}</p>
               </div>
             )}
-            {error && (
-              <div className="bg-red-500/10 border border-red-500/30 p-4 rounded text-red-400 text-xs font-mono mt-4 flex flex-col gap-2">
-                <p className="font-bold underline uppercase tracking-widest">Errore tecnico rilevato:</p>
-                <p>{error}</p>
-                <p className="mt-2 text-[10px] opacity-70 italic">Nota: Se l'errore è 'Failed to fetch', assicurati che il Worker sia correttamente deployato e che accetti richieste dall'indirizzo attuale.</p>
-              </div>
-            )}
+            {error && <p className="text-red-400 text-xs font-mono mt-4 italic">{error}</p>}
           </div>
         </div>
       </section>
@@ -564,26 +526,17 @@ const App = () => {
   );
 };
 
-export default App;
-
-// -- BLOCCO DI MONTAGGIO SICURO --
-if (typeof window !== 'undefined') {
-  const isSandbox = window.location?.hostname?.includes('usercontent.goog') || window.location?.hostname?.includes('csb.app');
-  
-  if (!isSandbox) {
-    import('react-dom/client')
-      .then(({ createRoot }) => {
-        const rootElement = document.getElementById('root');
-        if (rootElement && !rootElement._reactRootContainer) {
-          const root = createRoot(rootElement);
-          rootElement._reactRootContainer = root;
-          root.render(
-            <React.StrictMode>
-              <App />
-            </React.StrictMode>
-          );
-        }
-      })
-      .catch(err => console.warn("Montaggio manuale di React saltato", err));
-  }
+// -- BLOCCO DI MONTAGGIO: NECESSARIO PER PRODUZIONE --
+// Questo blocco è essenziale per il deploy su Vercel. 
+// L'elemento "root" è presente nel file index.html.
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
 }
+
+export default App;
