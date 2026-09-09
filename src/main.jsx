@@ -387,12 +387,12 @@ const App = () => {
             <div className="absolute inset-0 border-2 border-[#64ffda] translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 rounded-sm"></div>
             <div className="relative w-48 h-48 md:w-64 md:h-64 bg-[#112240] rounded-sm overflow-hidden border border-[#233554]">
                <img 
-                 src={`${base}Profile.png`} 
+                 src={`${base}profile.jpg`} 
                  alt="Pierluigi Monaco" 
                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
                  onError={(e) => {
-                   if (e.currentTarget.src.includes('Profile.png')) {
-                     e.currentTarget.src = `${base}profile.png`;
+                   if (e.currentTarget.src.includes('Profile.jpg')) {
+                     e.currentTarget.src = `${base}profile.jpg`;
                    } else {
                      e.currentTarget.style.display = 'none';
                      e.currentTarget.parentElement.innerHTML = '<div class="w-full h-full bg-[#233554] flex items-center justify-center text-[#64ffda] font-mono text-4xl font-bold">PM</div>';
