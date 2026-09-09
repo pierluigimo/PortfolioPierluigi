@@ -1,3 +1,7 @@
+/**
+ * Cloudflare Worker - Modello nativo @cf/meta/llama-3.2-3b-instruct
+ * Nessuna chiave API esterna richiesta, sfrutta l'infrastruttura Cloudflare AI.
+ */
 export default {
   async fetch(request, env, ctx) {
     const corsHeaders = {
@@ -35,7 +39,7 @@ export default {
         - Portfolio ricavi gestito: $205M (OpenText). Cost structure: $95M.
         - Riduzione costi operativi: -$9M / 15% OPEX.
         - Ottimizzazione processi: Automazione Power Query per WIND SPIE che ha ridotto i tempi di elaborazione payroll del 98% (da 2 settimane a 2 ore mensili), risparmio €45K/anno.
-        - Supporto Board: Generazione di oltre $4M di nuovi ricavi cloud strategici e implementazione policy finanziamento per operazioni fino a $6B.
+        - Supporto Board: Generazione di oltre $4M di ricavi cloud strategici e implementazione policy finanziamento per operazioni fino a $6B.
         
         DETTAGLIO ESPERIENZE:
         1. WIND SPIE Srl (Aprile 2026 - Maggio 2026) - Finance Manager / Process Optimization Lead:
@@ -68,32 +72,17 @@ export default {
         STRUMENTI: OneStream, SAP, Hyperion, Essbase, Power Query, Excel Avanzato, Power BI, Python, React.
       `;
 
-      const systemPrompt = `Sei l'assistente esecutivo e professionale di Pierluigi Monaco. 
-      Rispondi esclusivamente in ITALIANO con tono distinto, formale ed Executive (usa rigorosamente il 'Lei'). 
-      Basa le tue risposte unicamente sui dati forniti: ${coreIdentity}. 
-      Fornisci dettagli precisi, percentuali ed evidenze numeriche senza omettere nulla.`;
+      const systemPrompt = `Sei l'assistente esecutivo e professionale di Pierluigi Monaco. Rispondi esclusivamente in ITALIANO con tono distinto, formale ed Executive (usa rigorosamente il 'Lei'). Basa le tue risposte unicamente sui dati forniti: ${coreIdentity}. Fornisci dettagli precisi, percentuali ed evidenze numeriche senza omettere nulla.`;
 
-      const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${env.GROQ_API_KEY}`
-        },
-        body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
-          messages: [
-            { role: "system", content: systemPrompt },
-            { role: "user", content: question }
-          ],
-          temperature: 0.1,
-          max_tokens: 1200
-        })
+      // Esecuzione tramite Cloudflare Workers AI binding
+      const aiResponse = await env.AI.run("@cf/meta/llama-3.2-3b-instruct", {
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: question }
+        ]
       });
 
-      if (!response.ok) throw new Error(`Groq API error: ${response.status}`);
-
-      const data = await response.json();
-      const answer = data.choices[0].message.content;
+      const answer = aiResponse.response || "Risposta non disponibile.";
 
       return new Response(JSON.stringify({ answer }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
