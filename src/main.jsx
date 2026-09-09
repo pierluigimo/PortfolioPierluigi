@@ -18,8 +18,7 @@ import {
   Code2, 
   ExternalLink, 
   Menu, 
-  X,
-  Briefcase
+  X 
 } from 'lucide-react';
 
 const App = () => {
@@ -42,14 +41,14 @@ const App = () => {
     location: "Milano, Italia",
     email: "pierluigimonaco2@gmail.com",
     phone: "+39 348 8513668",
-    summary: "Finance Business Partner con un percorso di carriera focalizzato sulla trasformazione di dipartimenti finance complessi in hub di efficienza. Ho da sempre guidato l'evoluzione dei processi aziendali integrando automazione e nuove tecnologie per ridurre la manualità e creare valore. Esperto nel tradurre i dati in decisioni, supportando il Board nella generazione di $4M di ricavi aggiuntivi e ottimizzato costi operativi per $9M. Unisco la solidità tecnica (IFRS/GAAP) alla capacità di costruire team coesi e proattivi."
+    summary: "Strategic Finance Executive con oltre 20 anni di esperienza globale nella guida di progetti di trasformazione, governance finanziaria e ottimizzazione operativa. Ho conseguito una riduzione del 15% dei costi operativi (OPEX) e incrementato la produttività con strumenti di finanza basati su AI. Collaboro con leadership C-level a livello globale, influenzando investimenti e portafogli da oltre 200 milioni di dollari."
   };
 
   const highImpactResults = [
     { label: "Portfolio Oversight", value: "$205M Ricavi / $95M Costi" },
-    { label: "Nuovi Ricavi Cloud", value: "+$4M Contratti Strategici" },
-    { label: "Automazione Payroll", value: "-98% Tempi Processo" },
-    { label: "Ottimizzazione Costi", value: "$9M / 15% OPEX" }
+    { label: "WIND SPIE Optimization", value: "-98% Tempi Payroll" },
+    { label: "Cost Optimization", value: "15% Riduzione OPEX" },
+    { label: "Risk Mitigation", value: "Audit & Compliance 100%" }
   ];
 
   const experience = [
@@ -58,10 +57,9 @@ const App = () => {
       role: "Finance Manager - Process Optimization Lead",
       period: "Apr 2026 — Mag 2026",
       highlights: [
-        "Progettazione e implementazione di un sistema di automazione Power Query per le registrazioni mensili del payroll e le riconciliazioni SAP, riducendo i tempi di elaborazione da 2 settimane a 2 ore al mese (-98% del tempo di processo), con un risparmio stimato di circa €45K/anno in capacità operativa riallocata ad attività a maggior valore aggiunto.",
-        "Sviluppo e deployment di un modello P&L a livello progetto con logica di full cost allocation, riallineando i margini di progetto da un 100% non allocato a un realistico 55%.",
-        "Rimappatura dei centri di costo SAP e ricostruzione delle linee di reporting P&L locale allineate al modello Corporate, rafforzando i controlli di month-end close.",
-        "Riconciliazione di 4 mesi di dati storici payroll-SAP applicando logica GMAT per riallocare i costi della flotta veicoli ai progetti operativi."
+        "Progettazione e implementazione di un sistema di automazione Power Query per le registrazioni mensili del payroll e le riconciliazioni SAP, riducendo i tempi da 2 settimane a 2 ore al mese (-98% del tempo), con un risparmio stimato di €45K/anno.",
+        "Sviluppo di un modello P&L a livello commessa con logica di full cost allocation, riallineando i margini effettivi dal 100% non allocato al 55%.",
+        "Rimappatura dei centri di costo SAP e riconciliazione di 4 mesi di dati storici payroll con logica GMAT per flotta veicoli."
       ]
     },
     {
@@ -69,12 +67,10 @@ const App = () => {
       role: "Worldwide Commercial Finance Manager",
       period: "Apr 2023 — Mag 2025",
       highlights: [
-        "Advisor finanziario strategico per tre SVP globali: gestione di un portafoglio ricavi di $205M e una struttura di costi di $95M su EMEA, Nord America e APAC, a supporto dell'allocazione di risorse per oltre 425 FTE.",
-        "Implementazione di una policy di finanziamento globale per operazioni da $6B, ottimizzando i tempi medi di incasso a 30 giorni, la governance finanziaria e la gestione del rischio di insolvenze.",
-        "Ottimizzazione dei processi di pianificazione delle risorse nel rispetto del budget assegnato, riducendo le deviazioni di budget del 15% e migliorando l'accuratezza del forecast.",
-        "Test e implementazione degli strumenti AI per il bid management e il pre-sales, ottenendo un incremento iniziale del 5% nella produttività commerciale, con potenziale scalabilità fino al 15%.",
-        "Supervisione di progetti di governance finanziaria e visibilità dei ricavi per il canale strategico SAP, generando oltre $5M di ricavi incrementali e migliorando la precisione del forecast del 20%.",
-        "Promozione e stock grant FY25 per performance eccezionali e leadership finanziaria globale, con un impatto del -10% sui costi operativi in tre regioni."
+        "Advisor finanziario strategico per tre SVP globali: gestione di un portafoglio ricavi di $205M e costi di $95M su EMEA, Nord America e APAC (425 FTE).",
+        "Implementazione policy di finanziamento globale per operazioni da $6B, ottimizzando i tempi medi di incasso a 30 giorni.",
+        "Ottimizzazione pianificazione risorse, riducendo le deviazioni di budget del 15%. Test e deployment AI bid management (+5% produttività).",
+        "Canale SAP: generazione di oltre $5M di ricavi incrementali e forecast accuracy migliorata del 20%. Promozione e stock grant FY25."
       ]
     },
     {
@@ -82,35 +78,26 @@ const App = () => {
       role: "Worldwide Commercial Business Partner",
       period: "Apr 2022 — Apr 2023",
       highlights: [
-        "Responsabile dell'implementazione del modello di governance finanziaria per la transizione dal modello a licenza perpetua al modello cloud/subscription, con impatto su $58M di ricavi.",
-        "Responsabile commerciale per la chiusura di accordi cloud strategici per oltre $4M, a supporto di trattative complesse e trasformazione del modello di business.",
-        "Ricerca e sviluppo di strumenti di analisi P&L multi-scenario per migliorare la visibilità sulla redditività contrattuale e supportare i processi decisionali.",
-        "Ottimizzazione e standardizzazione del framework di controllo e reporting, in linea con gli obiettivi corporate e con effetti positivi sulla qualità delle previsioni.",
-        "Responsabile della riduzione del tasso di perdita contrattuale dal 20% al 10% grazie all'implementazione di modelli finanziari più accurati e un miglior allineamento con Sales e Product."
+        "Responsabile governance finanziaria transizione a Cloud/Subscription ($58M impatto) e chiusura contratti cloud >$4M.",
+        "Riduzione del tasso di perdita contrattuale (churn) dal 20% al 10%. Sviluppo modelli P&L multi-scenario (ASC 606)."
       ]
     },
     {
       company: "Micro Focus (Acquisita da OpenText)",
-      role: "Finance Business Partner - North, South, DACH & Int. Pre-Sales",
+      role: "Finance Business Partner - Int. Pre-Sales",
       period: "Apr 2018 — Apr 2022",
       highlights: [
-        "Gestione di $51M in ricavi e $37M in costi su 11 Paesi, supportando 166 FTE in un contesto internazionale a matrice complessa.",
-        "Riferimento del progetto core di conversione valutaria in Turchia, adottando il dollaro come valuta funzionale per mitigare il rischio cambio e garantire la conformità IFRS/US GAAP, senza perdita di clienti e con audit superato.",
-        "Guida dell'integrazione post-fusione dei processi MDF/rebate per $9M, standardizzando e ottimizzando gli accantonamenti e migliorando la visibilità finanziaria nonché i tempi di chiusura mensili in EMEA e LATAM.",
-        "Guida del progetto finalizzato al recupero di oltre $1M in crediti scaduti: selezione e formazione dei team contabili, rafforzamento della compliance. Obiettivo raggiunto nel rispetto di modi, tempi e budget stabiliti.",
-        "Riconosciuto come 'Support Person of the Month' per l'impatto su modellistica finanziaria e analisi delle varianze a supporto delle decisioni executive."
+        "Gestione di $51M in ricavi e $37M in costi su 11 Paesi (166 FTE).",
+        "Conversione valutaria in Turchia (Lira -> USD) contro rischio iperinflazione su portafoglio >$35M/anno con audit superati e recupero >$1M crediti deteriorati."
       ]
     },
     {
       company: "Hewlett Packard",
-      role: "Finance Lead - Support & Professional Services (2007-2018) | Senior Credit Analyst (2003-2007)",
+      role: "Finance Lead - Support & Professional Services",
       period: "Apr 2003 — Apr 2018",
       highlights: [
-        "Gestione di P&L e processi FP&A per le divisioni Support e Consulting a livello EMEA, mantenendo una deviazione forecast inferiore al 5%.",
-        "Studio e implementazione di un modello di analisi del margine lordo adottato a livello EMEA, migliorando la coerenza dei dati del 95%.",
-        "Centralizzazione del controllo dei costi in un Centro Servizi Condiviso (COE), con una riduzione dei costi del 15% nel primo anno.",
-        "Supporto finanziario per trattative strategiche ($0,8M-$2M) con clienti enterprise (ENEL, WIND, INPS, Poste). Promozione a 'Finance Ambassador' per l'Italia.",
-        "Gestione di oltre $200M di esposizione creditizia su più di 20 partner commerciali, standardizzazione dei processi di factoring e lancio di un Centro di Competenza Europeo per la governance del rischio credito (DSO ridotto di 6 giorni). Premiato come Employee of the Year (2005)."
+        "Gestione P&L EMEA Support/Consulting, varianza <5%. Centralizzazione costi in Shared Service Center (COE) con -15% costi.",
+        "Gestione credito per oltre $200M e factoring europeo. Employee of the Year 2005."
       ]
     }
   ];
@@ -120,13 +107,13 @@ const App = () => {
       title: "CFO Certification (UNI/PdR 104:2021)",
       institution: "Business School 'Il Sole 24 Ore', Milano",
       period: "Marzo 2026",
-      description: "Certified Chief Financial Officer, attestazione di conformità alla prassi di riferimento UNI/PdR 104:2021 per la qualifica professionale di CFO."
+      description: "Certified Chief Financial Officer, qualifica professionale di CFO."
     },
     {
       title: "Specialista in Applicazioni di Intelligenza Artificiale",
-      institution: "Attestato PAL-GOL Regione Lombardia (EQF 4) - YOUS Srl",
+      institution: "Attestato PAL-GOL Regione Lombardia (EQF 4)",
       period: "Marzo 2026",
-      description: "Corso intensivo 40 ore: analisi avanzata dei dati, AI per contenuti digitali, valutazione delle fonti e automazione dei flussi decisionali con strumenti di IA generativa."
+      description: "Corso intensivo su analisi dati, AI per contenuti digitali e automazione flussi decisionali."
     },
     {
       title: "Master in Finanza, Amministrazione e Controllo",
@@ -137,51 +124,27 @@ const App = () => {
       title: "Laurea in Economia e Gestione Aziendale",
       institution: "Università Cattolica del Sacro Cuore, Milano",
       period: "1997 — 1998",
-      description: "Tesi: 'La valutazione del capitale economico tramite il metodo dei multipli'"
+      description: 'Tesi: "La valutazione del capitale economico tramite il metodo dei multipli"'
     }
   ];
 
   const projects = [
     {
-      title: "Automazione Finance - Settore Energetico",
-      companyTag: "WIND SPIE Srl (2026)",
-      tech: ["Power Query", "SAP", "P&L Full Cost", "GMAT"],
-      desc: "Progettazione e implementazione di un sistema di automazione end-to-end per payroll booking e riconciliazioni SAP tramite Power Query. Ricostruzione del modello P&L di progetto con logica di full cost allocation e riallocazione costi flotta. Risultato: -98% tempi di processo (da 2 settimane a 2 ore/mese), risparmio €45K/anno, margini di progetto riallineati dal 100% al 55%.",
-      link: null
-    },
-    {
-      title: "Trasformazione Modello Subscription",
-      companyTag: "OpenText (2022-2023)",
-      tech: ["Cloud SaaS", "ASC 606", "ARR/MRR", "Churn Mitigation"],
-      desc: "Guida del passaggio da licensing tradizionale a subscription per Vertica e Portfolio. Definizione di nuovi modelli di governance, P&L e revenue recognition con Sales e Legal. Risultato: +$6.9M nuovo business subscription, riduzione del tasso di perdita manutenzione dal 20% al 10%.",
-      link: null
-    },
-    {
-      title: "Ottimizzazione FX & US GAAP Turchia",
-      companyTag: "Micro Focus (2018-2022)",
-      tech: ["US GAAP", "Hedging", "Hyperinflation", "Rebate"],
-      desc: "Conversione della valuta funzionale dell'entità turca da Lira a USD, eliminando l'esposizione al rischio di cambio in contesto di iperinflazione su un portafoglio >$35M/anno senza attrito con i clienti strategici e con pieno superamento degli audit.",
-      link: null
-    },
-    {
-      title: "Policy Globale di Finanziamento ($6B)",
-      companyTag: "OpenText (2023-2025)",
-      tech: ["Treasury", "Risk Mitigation", "Credit Policy", "Working Capital"],
-      desc: "Studio e progettazione di una strategia finanziaria globale in collaborazione con Treasury per supportare le operazioni worldwide, standardizzando le policy interne di finanziamento e pagamento su oltre $6B di deal value con DSO a 30 giorni.",
+      title: "Automazione Finance - WIND SPIE",
+      tech: ["Power Query", "SAP", "P&L Full Cost"],
+      desc: "Sistema end-to-end per payroll booking e riconciliazioni SAP. -98% tempi di processo (da 2 settimane a 2 ore/mese), risparmio €45K/anno.",
       link: null
     },
     {
       title: "Cynefin Framework Tool",
-      companyTag: "Web App Esecutiva",
-      tech: ["React", "Decision Making", "Complex Systems"],
-      desc: "Strumento digitale interattivo per il decision-making strategico basato sul framework Cynefin. Aiuta a categorizzare le sfide operative in domini di complessità per determinare la risposta manageriale ottimale.",
+      tech: ["React", "Web App", "Strategic Decision"],
+      desc: "Strumento digitale interattivo per il decision-making strategico basato sul framework Cynefin per categorizzare le sfide operative.",
       link: "https://cynefin-livid.vercel.app/"
     },
     {
       title: "CFO Playbook OS (Black Swan)",
-      companyTag: "Piattaforma Finanziaria",
-      tech: ["Python", "Pandas", "Streamlit", "Risk Simulation"],
-      desc: "Sistema Operativo finanziario progettato per CFO moderni. Include moduli automatizzati per il forecasting, la gestione della liquidità e la simulazione di scenari estremi di rischio ('Black Swan').",
+      tech: ["Python", "Pandas", "Streamlit"],
+      desc: "Sistema Operativo finanziario per CFO moderni con moduli di forecasting e simulazione di scenari di rischio estremo.",
       link: "https://black-swan-cfo.streamlit.app/" 
     }
   ];
@@ -190,22 +153,22 @@ const App = () => {
     {
       category: "Finanza Strategica",
       icon: <Target className="text-[#64ffda]" size={20} />,
-      skills: ["Pianificazione Scenari", "Analisi di Sensibilità", "DCF & Multipli", "M&A Due Diligence", "Capital Budgeting", "Monte Carlo Simulation"]
+      skills: ["Business Case", "Analisi Investimenti", "M&A & Due Diligence", "Valutazione", "Capital Budgeting"]
     },
     {
       category: "Governance & Audit",
       icon: <ShieldCheck className="text-[#64ffda]" size={20} />,
-      skills: ["IFRS & US GAAP", "Compliance SOX", "Audit Interno", "Gestione Rischio", "Revenue Rec (ASC 606)", "Full Cost Allocation"]
+      skills: ["IFRS & US GAAP", "Compliance SOX", "Audit Interno", "Gestione Rischio", "Revenue Rec (ASC 606)"]
     },
     {
-      category: "Cloud & Subscription",
+      category: "Cloud Business",
       icon: <Layout className="text-[#64ffda]" size={20} />,
-      skills: ["SaaS Finance", "ARR/MRR Modeling", "Pricing Strategy", "Churn Analysis", "Cloud Cost Optimization", "Working Capital Management"]
+      skills: ["SaaS Finance", "ARR/MRR Analysis", "Pricing Strategy", "Churn Analysis", "Cloud Cost Opt"]
     },
     {
-      category: "AI & Eccellenza Operativa",
+      category: "AI & Tech",
       icon: <BarChart3 className="text-[#64ffda]" size={20} />,
-      skills: ["RPA & Automazione Processi", "Power Query Avanzato", "Predictive Analytics", "Machine Learning Finance", "Shared Services COE", "Hedging & Rischio Cambio"]
+      skills: ["Predictive Analytics", "Automazione Processi", "Machine Learning", "RPA & Power Query", "AI & LLM Integration"]
     }
   ];
 
@@ -213,13 +176,11 @@ const App = () => {
     { name: "OneStream", level: "Avanzato" },
     { name: "SAP / SAP-RM", level: "Avanzato" },
     { name: "Hyperion / Essbase", level: "Avanzato" },
-    { name: "Power Query / Excel", level: "Avanzato" },
-    { name: "PowerPoint", level: "Avanzato" },
-    { name: "Python / Streamlit", level: "Avanzato" },
     { name: "Salesforce", level: "Intermedio" },
-    { name: "Power BI / BI Tools", level: "Intermedio" },
-    { name: "Oracle", level: "Intermedio" },
-    { name: "AI Tools & LLM", level: "Intermedio" }
+    { name: "Excel / Power Query", level: "Avanzato" },
+    { name: "Python / Streamlit", level: "Avanzato" },
+    { name: "Power BI", level: "Intermedio" },
+    { name: "Oracle", level: "Intermedio" }
   ];
 
   const askAI = async () => {
@@ -256,7 +217,7 @@ const App = () => {
       setAiResponse(data.answer || "L'assistente non ha restituito una risposta valida.");
     } catch (err) {
       console.error("Dettagli errore Assistente AI:", err);
-      setError("Si è verificato un problema tecnico di comunicazione con il Worker AI. Riprova tra poco.");
+      setError(`Si è verificato un problema tecnico: ${err.message}`);
     } finally {
       setIsAiLoading(false);
     }
@@ -332,7 +293,6 @@ const App = () => {
             <button 
               className="xl:hidden text-[#64ffda] ml-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle Menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -365,7 +325,7 @@ const App = () => {
         )}
       </nav>
 
-      {}
+      {/* Hero / Introduzione */}
       <section id="profilo" className="pt-36 pb-16 px-6 max-w-6xl mx-auto scroll-mt-28">
         <div className="flex flex-col-reverse md:flex-row gap-12 items-center md:items-start">
           <div className="flex-1 space-y-6">
@@ -375,14 +335,14 @@ const App = () => {
             </h1>
             <h2 className="text-3xl md:text-5xl font-bold text-[#8892b0] leading-[1.1]">
               <span className="text-[#64ffda] animate-pulse drop-shadow-[0_0_5px_rgba(100,255,218,0.4)]">Strategic Finance</span> <br className="hidden md:block"/>
-              <span className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors duration-300">Engineering Growth.</span>
+              <span className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors duration-300 animate-pulse">Engineering Growth.</span>
             </h2>
             <p className="max-w-2xl text-[#8892b0] text-lg leading-relaxed pt-4 font-light">
               {personalInfo.summary}
             </p>
           </div>
           
-          {/* FOTO PROFILO (con fallback robusto maiuscolo/minuscolo) */}
+          {/* FOTO PROFILO - Puntata a profile.jpg con fallback automatico */}
           <div className="relative group shrink-0">
             <div className="absolute inset-0 border-2 border-[#64ffda] translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 rounded-sm"></div>
             <div className="relative w-48 h-48 md:w-64 md:h-64 bg-[#112240] rounded-sm overflow-hidden border border-[#233554]">
@@ -391,8 +351,10 @@ const App = () => {
                  alt="Pierluigi Monaco" 
                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
                  onError={(e) => {
-                   if (e.currentTarget.src.includes('Profile.jpg')) {
-                     e.currentTarget.src = `${base}profile.jpg`;
+                   if (e.currentTarget.src.includes('profile.jpg')) {
+                     e.currentTarget.src = `${base}Profile.jpg`;
+                   } else if (e.currentTarget.src.includes('Profile.jpg')) {
+                     e.currentTarget.src = `${base}profile.png`;
                    } else {
                      e.currentTarget.style.display = 'none';
                      e.currentTarget.parentElement.innerHTML = '<div class="w-full h-full bg-[#233554] flex items-center justify-center text-[#64ffda] font-mono text-4xl font-bold">PM</div>';
@@ -403,7 +365,6 @@ const App = () => {
           </div>
         </div>
 
-        {/* METRICS ROW */}
         <div className="pt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
            {highImpactResults.map((result, idx) => (
              <div key={idx} className="p-6 bg-[#112240] border border-[#233554] rounded-sm hover:border-[#64ffda]/40 transition-all group">
@@ -414,7 +375,7 @@ const App = () => {
         </div>
       </section>
 
-      {}
+      {/* 02. Esperienza Professionale */}
       <section id="esperienza" className="py-16 px-6 max-w-4xl mx-auto scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
@@ -441,11 +402,11 @@ const App = () => {
         </div>
       </section>
 
-      {}
+      {/* 03. Formazione */}
       <section id="formazione" className="py-16 px-6 max-w-4xl mx-auto scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
-            <span className="text-[#64ffda] font-mono text-xl mr-2">03.</span> Formazione & Certificazioni
+            <span className="text-[#64ffda] font-mono text-xl mr-2">03.</span> Formazione
           </h3>
           <div className="h-[1px] bg-[#233554] w-full opacity-50 shadow-[0_0_10px_rgba(100,255,218,0.2)]"></div>
         </div>
@@ -462,30 +423,28 @@ const App = () => {
         </div>
       </section>
 
-      {}
-      <section id="progetti" className="py-16 px-6 max-w-5xl mx-auto scroll-mt-24">
+      {/* 04. Progetti & Codice */}
+      <section id="progetti" className="py-16 px-6 max-w-4xl mx-auto scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
-            <span className="text-[#64ffda] font-mono text-xl mr-2">04.</span> Progetti Core & Web App
+            <span className="text-[#64ffda] font-mono text-xl mr-2">04.</span> Progetti & Codice
           </h3>
           <div className="h-[1px] bg-[#233554] w-full opacity-50 shadow-[0_0_10px_rgba(100,255,218,0.2)]"></div>
         </div>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((proj, idx) => (
             <div key={idx} className="bg-[#112240] p-6 rounded-sm border border-[#233554] hover:border-[#64ffda]/50 transition-all group flex flex-col hover:shadow-[0_0_15px_rgba(100,255,218,0.1)]">
-              <div className="flex justify-between items-start mb-3">
-                <span className="text-[11px] font-mono text-[#64ffda] uppercase tracking-wider border border-[#64ffda]/30 px-2 py-0.5 rounded bg-[#64ffda]/5">
-                  {proj.companyTag}
-                </span>
+              <div className="flex justify-between items-start mb-4">
+                <Code2 size={36} className="text-[#64ffda] opacity-80" />
                 {proj.link && (
-                  <a href={proj.link} target="_blank" rel="noopener noreferrer" className="text-[#a8b2d1] hover:text-[#64ffda] transition-colors" aria-label="External Link">
+                  <a href={proj.link} target="_blank" rel="noopener noreferrer" className="text-[#a8b2d1] hover:text-[#64ffda] transition-colors">
                     <ExternalLink size={18} />
                   </a>
                 )}
               </div>
               <h4 className="text-lg font-bold text-[#e6f1ff] mb-2 group-hover:text-[#64ffda] transition-colors">{proj.title}</h4>
               <p className="text-[#8892b0] text-sm mb-4 flex-grow leading-relaxed">{proj.desc}</p>
-              <div className="flex flex-wrap gap-2 mt-auto pt-2 border-t border-[#233554]/60">
+              <div className="flex flex-wrap gap-2 mt-auto">
                 {proj.tech.map((t, i) => (
                   <span key={i} className="text-[11px] font-mono text-[#64ffda] opacity-80">{t}</span>
                 ))}
@@ -495,7 +454,7 @@ const App = () => {
         </div>
       </section>
 
-      {}
+      {/* 05. Competenze Chiave */}
       <section id="competenze" className="py-16 px-6 max-w-6xl mx-auto scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
@@ -520,12 +479,12 @@ const App = () => {
         </div>
       </section>
 
-      {}
+      {/* 06. Strumenti Digitali */}
       <section id="strumenti" className="py-16 px-6 max-w-4xl mx-auto text-center scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <div className="h-[1px] bg-[#233554] w-full opacity-50 shadow-[0_0_10px_rgba(100,255,218,0.2)]"></div>
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
-            <span className="text-[#64ffda] font-mono text-xl mr-2">06.</span> Strumenti Digitali & Sistemi
+            <span className="text-[#64ffda] font-mono text-xl mr-2">06.</span> Strumenti Digitali
           </h3>
           <div className="h-[1px] bg-[#233554] w-full opacity-50 shadow-[0_0_10px_rgba(100,255,218,0.2)]"></div>
         </div>
@@ -539,7 +498,7 @@ const App = () => {
         </div>
       </section>
 
-      {}
+      {/* 07. Assistente Digitale */}
       <section id="assistenteai" className="py-16 px-6 max-w-4xl mx-auto scroll-mt-24">
         <div className="flex items-center gap-4 mb-12">
           <h3 className="text-2xl font-bold text-[#e6f1ff] whitespace-nowrap animate-pulse drop-shadow-[0_0_8px_rgba(100,255,218,0.4)]">
@@ -551,11 +510,11 @@ const App = () => {
           <div className="absolute top-0 right-0 p-4 opacity-5 text-[#64ffda]"><Zap size={120} /></div>
           <div className="relative z-10">
             <p className="text-[#495670] text-[11px] font-mono mb-6 uppercase tracking-widest">
-              Addestrato sul CV Ufficiale Aggiornato (2026)
+              Powered by Cloudflare Workers AI (Llama 3.2 3B)
             </p>
             <p className="text-[#8892b0] text-sm mb-6 flex items-center gap-2 italic">
               <MessageSquare size={16} className="text-[#64ffda]" />
-              Fai una domanda sul progetto di ottimizzazione in WIND SPIE o sui risultati a livello globale in OpenText.
+              Fai una domanda sulla carriera di Pierluigi (es. "Quali sono i risultati in OpenText?")
             </p>
             <div className="flex gap-2 mb-6 flex-col sm:flex-row">
               <input 
@@ -587,11 +546,11 @@ const App = () => {
         </div>
       </section>
 
-      {}
+      {/* Footer / Contatti */}
       <footer id="contatti" className="py-20 px-6 max-w-3xl mx-auto text-center scroll-mt-24">
         <h3 className="text-5xl font-bold text-[#e6f1ff] mb-8 tracking-tighter animate-pulse drop-shadow-[0_0_10px_rgba(100,255,218,0.4)]">Parliamo di Impatto</h3>
         <p className="text-[#8892b0] mb-12 max-w-lg mx-auto">
-          Sono sempre interessato a nuove opportunità strategiche, advisory e sfide in ambito Finance & Process Transformation.
+          Sono sempre interessato a nuove opportunità strategiche e sfide in ambito Finance.
         </p>
         <div className="flex flex-col items-center gap-4 mb-16 relative">
           <div className="flex bg-[#112240] p-4 rounded border border-[#233554] items-center gap-4 group transition-colors hover:border-[#64ffda]/30 hover:shadow-[0_0_15px_rgba(100,255,218,0.1)]">
@@ -608,10 +567,10 @@ const App = () => {
           </a>
         </div>
         <div className="flex justify-center gap-10 text-[#8892b0]">
-           <a href="https://www.linkedin.com/in/pierluigi-monaco" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn profile" className="hover:text-[#64ffda] hover:-translate-y-1 transition-all"><Linkedin size={22} /></a>
+           <a href="https://linkedin.com/in/pierluigi-monaco" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn profile" className="hover:text-[#64ffda] hover:-translate-y-1 transition-all"><Linkedin size={22} /></a>
            <a href="https://github.com/pierluigimo" target="_blank" rel="noreferrer noopener" aria-label="GitHub profile" className="hover:text-[#64ffda] hover:-translate-y-1 transition-all"><Github size={22} /></a>
         </div>
-        <p className="mt-20 font-mono text-[9px] text-[#495670] uppercase tracking-[0.4em]">Strategic Finance Executive Portfolio — 2026</p>
+        <p className="mt-20 font-mono text-[9px] text-[#495670] uppercase tracking-[0.4em]">Strategic Finance Portfolio — 2026</p>
       </footer>
     </div>
   );
