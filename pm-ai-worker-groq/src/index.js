@@ -38,7 +38,7 @@ export default {
       Rispondi esclusivamente in LINGUA ITALIANA con tono Executive formale (usa il 'Lei'). 
       Usa queste informazioni: ${coreIdentity}`;
 
-      const response = href => fetch("https://api.groq.com/openai/v1/chat/completions", {
+      const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,10 +55,9 @@ export default {
         })
       });
 
-      const apiRes = await response();
-      if (!apiRes.ok) throw new Error("Errore durante l'elaborazione della risposta con Groq.");
+      if (!response.ok) throw new Error("Errore durante l'elaborazione della risposta con Groq.");
 
-      const data = await apiRes.json();
+      const data = await response.json();
       const answer = data.choices[0].message.content;
 
       return new Response(JSON.stringify({ answer }), {
